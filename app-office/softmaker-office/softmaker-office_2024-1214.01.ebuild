@@ -8,10 +8,10 @@ inherit desktop xdg-utils
 DESCRIPTION="SoftMaker Office 2024 - an office suite featuring a word processor (TextMaker), spreadsheets (PlanMaker) and slides software (Presentations)"
 HOMEPAGE="https://www.softmaker.com/en/softmaker-office"
 
-SRC_URI="https://www.softmaker.net/down/softmaker-office-2024-${PV}-amd64.tgz"
+SRC_URI="https://www.softmaker.net/down/softmaker-office-2024-${PV//\./-}-amd64.tgz"
 
 LICENSE="SoftMakerOffice"
-SLOT="0"
+SLOT="2024"
 
 # empty keywords = hardmask
 # reason: Products got split, subscription no longer unlocks 2024 but the separate NX product.
