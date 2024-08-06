@@ -8,7 +8,7 @@ inherit desktop xdg-utils
 DESCRIPTION="SoftMaker Office 2024 - an office suite featuring a word processor (TextMaker), spreadsheets (PlanMaker) and slides software (Presentations)"
 HOMEPAGE="https://www.softmaker.com/en/softmaker-office"
 
-SRC_URI="https://www.softmaker.net/down/softmaker-office-2024-${PV//\./-}-amd64.tgz"
+SRC_URI="https://www.softmaker.net/down/softmaker-office-${PV//\./-}-amd64.tgz"
 
 LICENSE="SoftMakerOffice"
 SLOT="2024"
