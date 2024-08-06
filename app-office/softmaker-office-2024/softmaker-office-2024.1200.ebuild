@@ -5,10 +5,10 @@ EAPI=8
 
 inherit desktop xdg-utils
 
-DESCRIPTION="SoftMaker Office - an office suite featuring a word processor (TextMaker), spreadsheets (PlanMaker) and slides software (Presentations)"
+DESCRIPTION="SoftMaker Office 2024 - an office suite featuring a word processor (TextMaker), spreadsheets (PlanMaker) and slides software (Presentations)"
 HOMEPAGE="https://www.softmaker.com/en/softmaker-office"
 
-SRC_URI="https://www.softmaker.net/down/softmaker-office-${PV//\./-}-amd64.tgz"
+SRC_URI="https://www.softmaker.net/down/softmaker-office-2024-${PV}-amd64.tgz"
 
 LICENSE="SoftMakerOffice"
 SLOT="0"
@@ -65,7 +65,7 @@ S="${WORKDIR}"
 INNER_ARCHIVE="office2024.tar.lzma"
 EXTRACTED_INNER_ARCHIVE="${WORKDIR}/extracted"
 
-FINAL_INSTALL_DIR="/opt/softmaker-office"
+FINAL_INSTALL_DIR="/opt/softmaker-office-2024"
 INSTALL_DIR="${D}${FINAL_INSTALL_DIR}"
 
 # disable QA check for pre-stripped binaries
