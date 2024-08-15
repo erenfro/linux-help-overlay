@@ -104,12 +104,13 @@ src_unpack() {
 src_prepare() {
 	## extract all lines defining functions from original install script so we can import it
 	# first make sure we actually have the expected revision
-	expected_hash="e3640f93e074c49bb5504ff0827213e7"
+	expected_hash="204008466dedbc763c26397f06d874ab"
 	actual_hash=$(md5sum "${WORKDIR}/installsmoffice" | cut -c'-32')
 	[[ "${actual_hash}" == "${expected_hash}" ]] || die "Unexpected file hash on install script, unable to extract functions. Expected MD5 ${expected_hash}, got: ${actual_hash}"
 
 	# extract
-	tail -n 1592 ${WORKDIR}/installsmoffice | head -n 1354 >${WORKDIR}/smoffice-install-functions.sh
+	#tail -n 1592 ${WORKDIR}/installsmoffice | head -n 1354 >${WORKDIR}/smoffice-install-functions.sh
+	sed -n '22,1380p;1381q' installsmoffice >"${WORKDIR}/smoffice-install-functions.sh"
 
 	# mandatory since EAPI 6
 	eapply_user
